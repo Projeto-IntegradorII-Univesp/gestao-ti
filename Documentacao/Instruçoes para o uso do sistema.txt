@@ -1,0 +1,49 @@
+====================================================================
+  SISTEMA DE CONTROLE DE ESTOQUE - ALMOXARIFADO DE TI (GRUPO 6)
+====================================================================
+
+Este projeto foi desenvolvido utilizando PHP (Laravel), MySQL e Bootstrap 5.
+Para facilitar a execução em ambiente local sem necessidade de comandos complexos,
+o projeto conta com scripts automatizados (.bat).
+
+--------------------------------------------------------------------
+  PRÉ-REQUISITOS
+--------------------------------------------------------------------
+1. XAMPP instalado no diretório padrão (C:\xampp).
+2. O serviço MySQL ativado no XAMPP Control Panel.
+3. Banco de Dados criado no phpMyAdmin com o nome: bd_gestaopro
+   (Importar o script SQL contido na pasta /Documentacao/bd_gestaopro.sql).
+
+--------------------------------------------------------------------
+  PASSO A PASSO PARA EXECUÇÃO
+--------------------------------------------------------------------
+
+OPÇÃO 1: EXECUÇÃO AUTOMÁTICA VIA ARQUIVO .BAT (RECOMENDADO)
+-----------------------------------------------------------
+1. Extraia o projeto na pasta desejada.
+2. Dê um duplo clique no arquivo "INICIAR_SISTEMA.bat" localizado na raiz do projeto.
+3. O script irá verificar as dependências, configurar o banco de dados e iniciar o servidor.
+4. Abra o navegador e acesse o endereço informado na tela:
+   http://127.0.0.1:8000  (ou o IP de rede local gerado pelo script)
+
+OPÇÃO 2: EXECUÇÃO MANUAL VIA COMPOSER
+-------------------------------------
+Caso prefira executar via terminal:
+1. Abra o terminal na pasta raiz do projeto.
+2. Baixe as dependências do Laravel rodando:
+   composer install
+3. Crie uma cópia do arquivo .env.example e renomeie para .env:
+   cp .env.example .env
+4. Gere a chave da aplicação:
+   php artisan key:generate
+5. Crie o link simbólico para as imagens dos produtos:
+   php artisan storage:link
+6. Inicie o servidor local:
+   php artisan serve --host=0.0.0.0 --port=8000
+
+--------------------------------------------------------------------
+  CREDENCIAIS DE ACESSO INICIAL
+--------------------------------------------------------------------
+- Login Administrador: admin@ti.com
+- Senha Padrão: 123456
+====================================================================
